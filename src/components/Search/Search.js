@@ -10,7 +10,8 @@ const useStyles = makeStyles(theme => ({
     '& > *': {
       margin: theme.spacing(1),
       // width: '25ch'
-      width: '90%'
+      width: '90%',
+      maxWidth: '800px'
     }
   }
 }));

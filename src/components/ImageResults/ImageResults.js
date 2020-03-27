@@ -9,7 +9,8 @@ function ImageResults({ images }) {
           className="image"
           key={img.id}
           src={img.previewURL}
-          alt={img.tags}
+          alt={`photo of ${img.tags}`}
+          tabIndex="0"
         />
       ))}
     </div>

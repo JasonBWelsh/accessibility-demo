@@ -35,7 +35,7 @@ function Navbar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            Accessibility w00t!
+            Accessibility Demo
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
