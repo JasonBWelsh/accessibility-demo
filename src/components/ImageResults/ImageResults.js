@@ -1,17 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 function ImageResults({ images }) {
+  useEffect(() => {
+    document.addEventListener('keyup', onKeyupEvent);
+  }, []);
+
+  const onKeyupEvent = e => {
+    if (document.activeElement.tagName === 'IMG') {
+      const target = e.target;
+      const images = document.querySelectorAll('.image');
+      images.forEach(img => {
+        if (img.classList.contains('image-focus')) {
+          img.classList.remove('image-focus');
+        }
+      });
+
+      target.classList.add('image-focus');
+    }
+  };
+
   console.log('xxx', images);
   return (
     <div className="images-container">
       {images.map(img => (
-        <img
-          className="image"
-          key={img.id}
-          src={img.previewURL}
-          alt={`photo of ${img.tags}`}
-          tabIndex="0"
-        />
+        <div>
+          <img
+            className="image"
+            key={img.id}
+            src={img.previewURL}
+            alt={`photo of ${img.tags}`}
+            tabIndex="0"
+          />
+        </div>
       ))}
     </div>
   );

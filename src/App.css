@@ -13,4 +13,12 @@
 .image {
   /* border: 1px solid tomato; */
   margin: 1rem;
+  /* filter: grayscale(80%); */
+  transition: all 0.2s ease-out;
+}
+
+.image-focus,
+.image:hover {
+  /* filter: grayscale(0); */
+  transform: scale(1.1);
 }

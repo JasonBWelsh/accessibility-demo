@@ -16,6 +16,9 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     flexGrow: 1
+  },
+  drd: {
+    background: '#253547'
   }
 }));
 
@@ -24,7 +27,7 @@ function Navbar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.drd}>
         <Toolbar>
           <IconButton
             edge="start"
